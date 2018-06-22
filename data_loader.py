@@ -59,8 +59,8 @@ def _generate_image_and_label_batch(image, label, min_queue_examples,
                                     batch_size, shuffle):
   """Construct a queued batch of images and labels.
   Args:
-    image: 3-D Tensor of [height, width, 3] of type.float32.
-    label: 1-D Tensor of type.int32
+    image: 3-D Tensor of [height, width, 3] of type tf.float32.
+    label: 1-D Tensor of type tf.int32
     min_queue_examples: int32, minimum number of samples to retain
       in the queue that provides of batches of examples.
     batch_size: Number of images per batch.
