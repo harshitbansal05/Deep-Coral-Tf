@@ -20,6 +20,8 @@ In the aforementioned paper, authors have attempted to extend CORAL to learn a n
 
 * Finally, training begins. Since a pre-trained Alexnet is used as the model, the weights of the Alexnet need to be downloaded and stored in the directory `/office31_data`. The link for downloading weights is [here](https://www.cs.toronto.edu/~guerzhoy/tf_alexnet/bvlc_alexnet.npy). The training is carried for 40 epochs and the training checkpoints are saved in `/office31_data/train`. Also, a summary of the loss, gradient and weights is also made and saved in `/office31_data/summary` and can be used for visualization in Tensorboard. 
 
+2. To evaluate the model on the target distribution (**webcam** for the current implementation), run `python3 eval_net.py`. It performs the evaluation on the entire target dataset and prints the precision at the end. 
+
 ## Contributing
 Suggestions and pull requests are actively welcome.
 
