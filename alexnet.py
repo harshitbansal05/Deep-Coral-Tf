@@ -310,7 +310,6 @@ def train(total_loss, global_step):
   # Variables that affect learning rate.
   # num_batches_per_epoch = NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN / 200
   # decay_steps = int(num_batches_per_epoch * NUM_EPOCHS_PER_DECAY)
-
   # Decay the learning rate exponentially based on the number of steps.
   # low_lr = tf.train.exponential_decay(LOW_LEARNING_RATE,
   #                                 global_step,
@@ -346,4 +345,3 @@ def train(total_loss, global_step):
     variables_averages_op = variable_averages.apply(tf.trainable_variables())
 
   return variables_averages_op
-  
