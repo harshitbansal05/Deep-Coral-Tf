@@ -2,13 +2,16 @@ import tensorflow as tf
 import math
 import os
 
+from datetime import datetime
+
 import data_loader
+from alexnet import *
 
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_integer('batch_size', 56,
                             """Number of images to process in a batch.""")
-tf.app.flags.DEFINE_string('tf_records_file', '/office31_data/office31/webcam.tfrecords',
+tf.app.flags.DEFINE_string('tf_records_file', 'office31_data/office31/webcam.tfrecords',
                            """Path to the data directory.""")
 
 NUM_EXAMPLES_PER_EPOCH_FOR_EVAL = data_loader.NUM_EXAMPLES_PER_EPOCH_FOR_EVAL
